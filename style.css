@@ -6,3 +6,49 @@ body {
 	background:#FFE4E1;
 	text-align:center;
 }
+.login-content {
+	width: 250px;
+    height: 250px;
+    background: white;
+    border: 2px black solid;
+	z-index:30;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction:column;
+}
+.cover {
+	background: gray;
+	opacity:0.5;
+	width:100%;
+	height:100vh;
+	position:fixed;
+	top:0;
+	left:0;
+	
+}
+.login-popup {
+	width:100%;
+	height:100vh;
+	position:fixed;
+	top:0;
+	left:0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.close-block{
+	display: flex;
+    justify-content: flex-end;
+	width:100%;
+	
+}
+
+.icon {
+	background-image:url(close.png);
+	width:20px;
+	height:20px;
+	background-size:cover;
+	display:inline-block;
+	
+}
