@@ -6,9 +6,78 @@ $(document).ready(function(){
 			['<', '>'],
 		];
 	
+	// 12.78.76
+	
 	$('.login-popup .icon').click(function(){
 		$('.login-popup').hide();
 	});
+	
+	$('.textarearCool .process').click(function(){
+		var data = $('.textarearCool .data').val();
+		
+		var userText = data.replaceAll('\n','<br>');
+		//var textRich = "line1\r\nline2\r\nline3";
+		// "line1<br>nline2<br>line3"
+		//var numberCount = calcNumberCount(data);
+		$('.textarearCool .result').html(userText);
+	});
+	
+	
+	
+	
+	
+	$('.accountNumbers .process').click(function(){
+		var data = $('.accountNumbers .data').val();
+		
+		var userText = calcNumbers(data);
+		$('.accountNumbers .result').text(userText);
+		
+		
+	});
+	function calcNumbers(data) {
+		var amount = 0;
+		var point = 0;
+		for (var i = 0; i<data.length; i++) {
+			
+			if  (data[i]!== ' ' && !isNaN(data[i]) && (isNaN(data[i+1]) || data[i+1]=== ' ')) {
+				
+				amount++;
+			}	
+			if (data[i]=== '.') {point++}
+	    }
+	return amount;
+	}
+	
+	function calcNumberCount(line){
+		var answer = 0;
+		//Идём ли мы уже по начатому числу
+		var numberWasStarted = false;
+		//Встречали ли точки
+		var flagDot = false;
+		
+		for(var i = 0; i < line.length ; i++){
+			var symbol = line[i];
+			if ( !isNaN(symbol) ){
+				if (!numberWasStarted)
+				{
+					//Начали число
+					answer++;
+					numberWasStarted = true;
+				}
+			}else{
+				if (symbol == '.' && !flagDot) {
+					//Встретили первую точку
+					flagDot = true;
+				} else {
+					//Законичили число
+					numberWasStarted = false;
+					flagDot = false;
+				}
+			}
+		}
+		
+		return answer;
+	}
 	
 	$('.closeSymbol .process').click(function(){
 		var data = $('.closeSymbol .data').val();
@@ -19,27 +88,6 @@ $(document).ready(function(){
 		
 		
 	});
-	
-	function calcCloseSymbol2(data){
-		var checkArr=[];
-		for (var i = 0; i<data.length; i++) {
-			var symbol = data[i];
-				for(var j = 0; j < bra.length ; j++){
-					var onePairOfBra  = bra[j];// Example ['<', '>']
-					if (onePairOfBra[0] == symbol){
-						checkArr.push(symbol);
-					}
-					if (onePairOfBra[1] == symbol){
-						
-					}
-					
-				}	
-			}
-			
-		
-		
-	}
-	
 	
 	
 	function calcCloseSymbol(data) {
