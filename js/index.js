@@ -12,6 +12,24 @@ $(document).ready(function(){
 		$('.login-popup').hide();
 	});
 	
+	$('.polindrom .process').click(function(){
+		var data = $('.polindrom .data').val();
+		
+		var userText = calcPolindrom(data);
+		
+		$('.polindrom .result').html(userText);
+	});
+	
+	
+	function calcPolindrom(data){
+		var isPolindrom = false;
+		for (var i = 0; i<data.length; i++) {
+			if
+			
+	    }
+		
+		
+	}
 	$('.textarearCool .process').click(function(){
 		var data = $('.textarearCool .data').val();
 		
