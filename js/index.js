@@ -12,24 +12,120 @@ $(document).ready(function(){
 		$('.login-popup').hide();
 	});
 	
+	$('.square .process').click(function(){
+		var data = $('.square .data').val();
+		
+		var divElem = $("<div>");
+		divElem.addClass('fun');
+		divElem.appemd();
+		$('.square .result').append(divElem);
+		for (var i=0; i<data[0];i++){
+			$('.square .result').append("<span></span>");
+			
+		}
+	});
+	
+	
+	
+	$('.minNumbers .process').click(function(){
+		var data = $('.minNumbers .data').val();
+		
+		var userText = calcMinNumbers(data);
+		$('.minNumbers .result').text(userText);
+	});
+	
+	function calcMinNumbers(data) {
+		var minNumbers = [];
+		for (var i =1; i<data.length; i++) {
+			
+		}
+		
+	}
+	
+	//найти одно минимальное число;
+	
+	function calcMinNumber(data) {
+		
+		var minNum =data[0];
+		
+		for (var i =1; i<data.length; i++) {
+			
+			if (data[i] < minNum) {
+				
+				minNum = data[i];
+			}
+			
+		}
+		
+		
+		return minNum;
+	}
+	
+	
+	
+	
+	$('.fibonacсi .process').click(function(){
+		var data = $('.fibonacсi .data').val();
+		
+		var userText = calcFibonacсi(data);
+		$('.fibonacсi .result').text(userText);
+	});
+	
+	function calcFibonacсi(data) {
+		var numbersFibonacсi = [ 1, 1];
+		for (var i =2; i<data; i++) {
+			var newnumber = numbersFibonacсi[i-1]+numbersFibonacсi[i-2];
+			numbersFibonacсi.push(newnumber);
+		}
+		
+		return numbersFibonacсi.join('');
+	}
+	
+	
+	
+	$('.wordUser .process').click(function(){
+		var data = $('.wordUser .data').val();
+		
+		var userText = calcFirstWord(data);
+		$('.wordUser .result').text(userText);
+	});
+	function calcFirstWord(data) {
+		var newdata = [];
+		for (var i =2; i<data.length; i++) {
+			if (data[i-2]==='.') {
+				var a  = data[i].toUpperCase();
+				newdata.push(a);
+			}
+			else {
+				newdata.push(data[i]);
+			}
+		}
+		return newdata.join('');
+	}
+	
+	
+	
+	
 	$('.polindrom .process').click(function(){
 		var data = $('.polindrom .data').val();
 		
 		var userText = calcPolindrom(data);
+		if (userText) {$('.polindrom .result').text("Полиндром!");}
+		else {$('.polindrom .result').text("Не Полиндром!");}
 		
-		$('.polindrom .result').html(userText);
 	});
 	
 	
 	function calcPolindrom(data){
-		var isPolindrom = false;
-		for (var i = 0; i<data.length; i++) {
-			if
-			
+		for (var i = 0; i<data.length/2; i++) {
+			if (data[i]!==data[data.length-1-i]) {
+				return false;
+			} 
 	    }
-		
-		
+		return true;
 	}
+	
+	
 	$('.textarearCool .process').click(function(){
 		var data = $('.textarearCool .data').val();
 		
