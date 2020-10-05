@@ -6,11 +6,104 @@ $(document).ready(function(){
 			['<', '>'],
 		];
 	
+	
 	// 12.78.76
 	
 	$('.login-popup .icon').click(function(){
 		$('.login-popup').hide();
 	});
+	
+	
+	$('.anagram .process').click(function(){
+		var firstdata = $('.anagram .firstdata').val();
+		var seconddata = $('.anagram .seconddata').val();
+		var isAnagram = calcAnagram(firstdata,seconddata);
+		if (isAnagram) {$('.anagram .result').text("Анаграмма!");}
+		else {$('.anagram .result').text("Не Анаграмма!");}
+		
+		
+	});
+	
+	
+	function calcAnagram(firstdata,seconddata){
+		if (firstdata.length !== seconddata.length) {
+			return false;
+		}
+		
+		var arr1 = firstdata.split('');
+		var arr2 = seconddata.split('');
+		
+		arr1.sort();
+		arr2.sort();
+		    for (var i = 0; i<arr1.length; i++) {
+				if (arr1[i]!== arr2[i]) {
+					return false;
+				}
+				
+			}
+		
+		return true;
+		
+	}
+	
+	
+	
+	
+	$('.sumTen .process').click(function(){
+		var data = $('.sumTen .data').val();
+		
+		var userText = calcSumTen(data);
+		$('.sumTen .result').text(userText);
+	});
+	
+	
+	function calcSumTen(data) {
+		var newdata=data.split('');
+
+        var symbols =[];
+		
+		for (var i = 0; i<newdata.length; i++) {
+			var symbol = newdata[i] - 0;
+			for (var j = 1; j<newdata.length; j++) {
+				var second = newdata[j] - 0;
+				var sum = symbol + second;
+				if (sum === 10) {
+					symbols.push(symbol);
+					symbols.push(second);
+				}
+			}
+			
+		}
+		return symbols.join('');
+		
+	}
+	
+	
+	
+	$('.dublicate .process').click(function(){
+		var data = $('.dublicate .data').val();
+		
+		var userText = calcDublicate(data);
+		$('.dublicate .result').text(userText);
+	});
+	
+	function calcDublicate(data){
+		var newdata=data.split('');
+		
+		var uniq = [];
+		for (var i = 0; i<newdata.length; i++) {
+			var a = newdata[i];
+			
+			
+			if (uniq.indexOf(a)<0) {
+				
+				uniq.push(a)
+			}
+		}
+		return uniq.join('');
+		
+	}
+	
 	
 	$('.square .process').click(function(){
 		var data = $('.square .data').val();
