@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="styles/gallery.css">
+		<link rel="stylesheet" href="styles/icon.css">
+		<script src="js/jquery-3.5.0.min.js"></script>
+		<script src="js/gallery.js"></script>
+	</head>
+	<body>
+		<div class='main'>
+			<div class='left-menu'>
+				Галлерея! Красивые картинки
+				
+				<a href='https://material.io/resources/icons' target='_blank'>icons web</a>
+				<input class='filter' placeholder='#image' />
+				
+			</div>
+			<div class='content'>
+				<div class='goods first'>
+					<div class='name'>
+						<input class='new-image-name' placeholder='Название' />
+						<span class='icon delete' style='visibility:hidden;'></span>
+					</div>
+					<div>
+						<input class='new-image-url' placeholder='URL картинки' />
+						<span class='icon add'></span>
+					</div>
+					<div class='image'>
+						<img src='img/shape.jpg' />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='login-popup'>
+			<div class='cover'></div>
+			<div class='login-content'>
+				<div class='close-block'>
+					<span class='icon close'></span>
+				</div>
+				<div>
+					<div>
+						<input type='text' placeholder='Login' />
+					</div>
+					<div>
+						<input type='password' placeholder='Password' />
+					</div>
+					<div>
+						<input type='button' value='login' />
+						<input type='button' value='registration' />
+					</div>
+				</div>
+				<div class='empty'></div>
+			</div>
+		</div>
+	</body>
+</html>

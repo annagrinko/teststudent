@@ -1,0 +1,53 @@
+.header{
+	text-align: center;
+	height: 50px;
+	background: aqua;
+}
+
+.result{
+	border: 1px green solid;
+}
+
+.login-popup{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-popup .cover{
+	background: #000;
+	opacity: 0.5;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+.login-popup .login-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border: 2px green solid;
+    z-index: 20;
+    flex-direction: column;	
+}
+
+.login-popup .close-block{
+	display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.login-popup .empty{
+	height: 20px;
+}

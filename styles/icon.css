@@ -1,0 +1,19 @@
+.icon{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background-size: cover;
+	cursor: pointer;
+}
+
+.icon.close{
+	background-image: url(../img/icon-close.png);
+}
+
+.icon.add{
+	background-image: url(../img/add-24px.svg);
+}
+
+.icon.delete{
+	background-image: url(../img/delete-24px.svg);
+}
