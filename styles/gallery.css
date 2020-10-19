@@ -14,20 +14,24 @@ body{
 }
 
 .left-menu{
-	width: 100px;
+	width: 150px;
 	background: aqua;
 	padding: 5px;
 }
-.filter {
-	width: 80px;
+
+.left-menu .filter{
+	width: 140px;
 }
 
 .goods{
 	border: 1px #ccc solid;
+	border-radius: 10px;
 	width: 200px;
 	height: 200px;
 	display: flex;
     flex-direction: column;
+	margin: 3px;
+    
 }
 
 .goods div{
@@ -87,4 +91,13 @@ body{
 
 .login-popup .empty{
 	height: 20px;
+}
+.login-popup .login-content.fullScreen {
+
+	 width: 100%;
+     height: 100%;
+}
+.carousel-image {
+	max-height: 100px;
+	max-width: 100px;
 }

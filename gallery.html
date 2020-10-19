@@ -8,35 +8,91 @@
 	<body>
 		<div class='main'>
 			<div class='left-menu'>
-				Галлерея! Красивые картинки
+				<div>
+					Галлерея! Красивые картинки
+					<a href='https://material.io/resources/icons' target='_blank'>icons web</a>
+				</div>
+				<div>
+					<input class='filter' placeholder='фильтрация' />
+				</div>
 				
-				<a href='https://material.io/resources/icons' target='_blank'>icons web</a>
-				<input class='filter' placeholder='#image' />
+				<div>
+					<label>
+						Name <input type='radio' name='sortField' checked='checked' value='name' />
+					</label>
+					
+					<label>
+						Url <input type='radio' name='sortField' value='url' />
+					</label>
+					
+					<label>
+						Age <input type='radio' name='sortField' value='age' />
+					</label>
+					
+					<label>
+						Salry <input type='radio' name='sortField' value='salary' />
+					</label>
+				</div>
+				
+				<div>
+					<label>
+						Вверх <input type='radio' name='sortOrder' value='Up' />
+					</label>
+					
+					<label>
+						Вниз <input type='radio' name='sortOrder' value='Down' />
+					</label>
+				</div>
+				<div>
+					<div>
+						<label>
+							С учётом P <input type='radio' name='registerSort' value='1' />
+						</label>
+					</div>
+					
+					<div>
+						<label>
+							Без учёта P <input type='radio' name='registerSort' value='2' />
+						</label>
+					</div>
+				</div>
+				<div>
+					<input type='button' value='обновить' class='refresh'/>
+				</div>
+				
 				
 			</div>
-			<div class='content'>
-				<div class='goods first'>
-					<div class='name'>
-						<input class='new-image-name' placeholder='Название' />
-						<span class='icon delete' style='visibility:hidden;'></span>
+			<div>
+				<div class='content'>
+					<div class='goods first'>
+						<div class='name'>
+							<input class='new-image-name' placeholder='Название' />
+							<span class='icon delete' style='visibility:hidden;'></span>
+						</div>
+						<div>
+							<input class='new-image-url' placeholder='URL картинки' />
+							<span class='icon add'></span>
+						</div>
+						<div class='image'>
+							<img src='img/shape.jpg' />
+						</div>
 					</div>
-					<div>
-						<input class='new-image-url' placeholder='URL картинки' />
-						<span class='icon add'></span>
-					</div>
-					<div class='image'>
-						<img src='img/shape.jpg' />
-					</div>
+				</div>
+				<div class = 'carousel'>
+					<span class='left'> <= </span>
+					<img class ='carousel-image' src='img/shape.jpg' />
+					<span class='right'> => </span>
 				</div>
 			</div>
 		</div>
+		
 		<div class='login-popup'>
 			<div class='cover'></div>
 			<div class='login-content'>
 				<div class='close-block'>
 					<span class='icon close'></span>
 				</div>
-				<div>
+				<div class='login-content-empty'>
 					<div>
 						<input type='text' placeholder='Login' />
 					</div>
