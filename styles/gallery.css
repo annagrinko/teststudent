@@ -55,7 +55,7 @@ body{
 	height: 100vh;
 	top: 0;
 	left: 0;
-	
+	z-index:20;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -69,6 +69,7 @@ body{
 	height: 100vh;
 	top: 0;
 	left: 0;
+
 }
 
 .login-popup .login-content{
@@ -87,6 +88,7 @@ body{
 	display: flex;
     justify-content: flex-end;
     width: 100%;
+	
 }
 
 .login-popup .empty{
@@ -97,7 +99,49 @@ body{
 	 width: 100%;
      height: 100%;
 }
-.carousel-image {
-	max-height: 100px;
-	max-width: 100px;
+.carousel-image-central {
+	height: 400px;
+	width: 400px;
+	
+}
+.carousel-image-right, .carousel-image-left  {
+	height: 200px;
+	width: 200px;
+} 
+.carousel{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 400px;
+	width: 100%;
+}
+.carousel img{
+	max-height: 100%;
+	max-width: 100%;
+}
+.carousel .buttons {
+	position:absolute;
+	display: flex;
+    align-items: center; 
+    height: 400px;
+	width: 400px;	
+}
+.left {
+	
+	z-index:1;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 50%;
+    height: 100%;
+}
+
+.right {
+	
+	z-index:1;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 50%;
+    height: 100%;
 }

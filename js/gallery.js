@@ -9,7 +9,7 @@ $(document).ready(function(){
 		{
 			id: 2,
 			name: 'Z-Blond',
-			url: 'img/Girl1.jpg'
+			url: 'img/Girl2.jpg'
 		},
 		// {
 			// name: 'Blond',
@@ -22,12 +22,12 @@ $(document).ready(function(){
 		{
 			id: 3,
 			name: 'Z-Red',
-			url: 'img/Girl2.jpg'
+			url: 'img/Girl3.jpg'
 		},
 		{
 			id: 4,
 			name: 'A-Red',
-			url: 'img/Girl2.jpg'
+			url: 'img/Girl4.jpg'
 		},
 	];
 	
@@ -192,22 +192,23 @@ $(document).ready(function(){
 		
 		currentId++;
 		if (currentId >= goods.length) {
-			currentId = goods.length - 1;
+			
+			currentId = 0;
 		}
 		
 		var good = goods[currentId];
-		$('.carousel-image').attr('src', good.url);
+		$('.carousel-image-central').attr('src', good.url);
 	});
 	
 	$('.left').click(function(){
 		
 		currentId--;
 		if (currentId < 0) {
-			currentId = 0;
+			currentId = goods.length-1;
 		}
 		
 		var good = goods[currentId];
-		$('.carousel-image').attr('src', good.url);
+		$('.carousel-image-central').attr('src', good.url);
 	});
 	
 	
